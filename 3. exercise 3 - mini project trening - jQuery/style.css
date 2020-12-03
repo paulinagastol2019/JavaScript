@@ -1,0 +1,42 @@
+body {
+    min-height: 200vh;  /*strona przewijana*/
+}
+
+.wrapper {
+    margin: 10px 70px;      /* marginesy w koło tekstu*/
+}
+
+.wrapper p {
+    font-size: 18px;
+    line-height: 200%;
+}
+
+.burger {
+    position: fixed;  /* przyklejenie do okna przeglądarki > przypominajka !*/
+    top: 30px;
+    right: 30px;
+    font-size: 50px;
+    z-index: 1;  /* burger na wyższej warstwie widoku*/
+}
+
+i.off {
+    display: none;
+}
+
+i.fa-angle-up {
+    color: black;
+}
+
+nav {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    top: 0;
+    height: 30vh;
+    background-color: pink;
+    transition: .2s linear;
+}
+
+nav.off {
+    top: -300px;
+}
