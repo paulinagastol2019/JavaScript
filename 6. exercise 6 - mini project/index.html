@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    button {
+        display: block;
+        margin: 10px auto;
+        font-family: arial;
+        font-size: 12px;;
+        text-transform: uppercase;
+
+    }
+    
+    div {
+        width: 30px;
+        height: 30px;
+        background-color: pink;
+        margin: 5px;
+        float: left;
+        color: white;
+        text-align: center;
+        line-height: 30px;
+        border: 2px solid pink;
+    }
+
+    .circle {
+        background-color: white;
+        border: 2px solid pink;
+        border-radius: 50%;
+        color: pink;
+    }
+    
+    
+    </style>
+</head>
+<body>
+    <button>kliknij aby utworzyc element</button>
+
+    <script>
+        const btn = document.querySelector("button");
+        let number = 1;
+
+        const action = function() {
+            const div = document.createElement("div");
+
+            if (number%5 == 0) {
+                div.classList.add("circle");
+            }
+
+
+
+            document.body.appendChild(div);
+            div.textContent = number;
+            number++
+            console.log(number)
+        }
+
+        btn.addEventListener("click", action);
+
+
+    </script>
+</body>
+</html>
